@@ -1,0 +1,217 @@
+// BookingsPage.scss
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+.bookings-page {
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    @include media-breakpoint-up(md) {
+        padding: 3rem 2rem;
+    }
+}
+
+.bookings-header {
+    margin-bottom: 2.5rem;
+
+    h1 {
+        margin-bottom: 0.5rem;
+        color: #2d3748;
+        font-weight: 700;
+    }
+}
+
+.booking-card {
+    overflow: hidden;
+    border-radius: 12px;
+    border: none;
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #ffffff;
+    border: 1px solid #3d6dff6c;
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1) !important;
+    }
+
+    .btn-outline-primary {
+        border-radius: 5rem;
+        background-color: #1124f03d;
+        color: #3041ff;
+        border: 1px solid #4151fead;
+        transition: all .5s ease-in-out;
+
+        &:hover {
+            background-color: transparent;
+            color: #3041ff;
+        }
+    }
+
+    .btn-outline-danger {
+        background-color: #ff00003b;
+        border: 1px solid #ff000067;
+        border-radius: 5rem;
+        color: #f60c0c;
+        transition: all .5s ease-in-out;
+
+        &:hover {
+            background-color: transparent;
+        }
+    }
+}
+
+.location-image-container {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.location-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+.location-badge {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    .icon {
+        margin-right: 2px;
+    }
+}
+
+.price-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #000000d9;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.duration-badge {
+    background-color: #4151fe38;
+    color: #3041ff;
+    border: 1px solid #3041ff75;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.booking-info {
+    margin-bottom: 1rem;
+}
+
+.booking-dates {
+    padding: 1rem 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.feature-tag {
+    display: inline-block;
+    background-color: #4151fe5b;
+    color: #3041ff;
+    border: 1px solid #3041ff80;
+    border-radius: 16px;
+    padding: 4px 12px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+        background-color: transparent;
+    }
+}
+
+.location-description {
+    color: #4d4d4d;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+    font-style: italic;
+}
+
+.edit-form {
+    .form-label {
+        font-weight: 500;
+        color: #4a5568;
+        font-size: 0.875rem;
+        margin-bottom: 0.25rem;
+    }
+
+    .input-group {
+        margin-bottom: 0.5rem;
+    }
+
+    .input-group-text {
+        background-color: #f8f9fa;
+        color: #6c757d;
+    }
+}
+
+.empty-state {
+    padding: 3rem 1rem;
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    max-width: 600px;
+    margin: 0 auto;
+
+    h2 {
+        margin-bottom: 1rem;
+        color: #2d3748;
+    }
+
+    p {
+        margin-bottom: 2rem;
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .empty-state-icon {
+        display: inline-block;
+        margin-bottom: 1.5rem;
+
+        img {
+            filter: drop-shadow(0 4px 12px #b5b5b569);
+        }
+    }
+}
+
+.btn {
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+
+.booking-actions {
+    .btn {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+}
